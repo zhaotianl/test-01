@@ -10,6 +10,8 @@ public class UserDao implements OrderDaoInterface{
 		User user = new User();
 		user.setAge(33);
 		System.out.println("创建了User"+user.getName());
+		System.out.println("创建了User"+user.getName());
+		System.out.println("创建了User"+user.getName());
 	}
 
 	@Override
