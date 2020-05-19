@@ -13,5 +13,17 @@ public class OrderDao implements OrderDaoInterface {
 		System.out.println("创建了Order"+order.getName());
 	}
 
+	@Override
+	public void delete1() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void delete2() {
+		// TODO Auto-generated method stub
+		
+	}
+
 	
 }
