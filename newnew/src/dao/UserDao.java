@@ -25,7 +25,16 @@ public class UserDao implements OrderDaoInterface{
 		// TODO Auto-generated method stub
 		
 	}
-	
-	
-	
+
+	@Override
+	public void delete3() {
+
+	}
+
+	@Override
+	public void delete4() {
+
+	}
+
+
 }
