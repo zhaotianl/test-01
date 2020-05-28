@@ -11,6 +11,20 @@ public class OrderDao implements OrderDaoInterface {
 		order.setId(1111111111l);
 		order.setName("订单1");
 		System.out.println("创建了Order"+order.getName());
+		System.out.println("创建了Order"+order.getName());
+		System.out.println("创建了Order"+order.getName());
+	}
+
+	@Override
+	public void delete1() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void delete2() {
+		// TODO Auto-generated method stub
+		
 	}
 
 	
