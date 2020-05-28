@@ -15,8 +15,14 @@ public class TEST {
 //		//TEST t = new TEST();
 //		changeNum(num);
 //		System.out.println(num);
+        //		//TEST t = new TEST();
+//		changeNum(num);
+//		System.out.println(num);
 
         User user = new User(22, "张三");
+        changeUser(user);
+        System.out.println(user.toString());
+        User user1 = new User(22, "张三");
         changeUser(user);
         System.out.println(user.toString());
     }
