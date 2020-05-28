@@ -30,22 +30,6 @@ public class TEST {
         User user = new User(22, "张三");
         changeUser(user);
         System.out.println(user.toString());
-        User user1 = new User(22, "张三");
-        changeUser(user);
-        System.out.println(user.toString());
-
-
-
-        User user2 = new User(22, "张三");
-        changeUser(user);
-        System.out.println(user.toString());
-        System.out.println(user.toString());System.out.println(user.toString());
-        System.out.println(user.toString());System.out.println(user.toString());System.out.println(user.toString());
-        System.out.println(user.toString());
-        System.out.println(user.toString());System.out.println(user.toString());
-
-
-
 
     }
 
