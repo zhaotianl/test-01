@@ -37,7 +37,8 @@ public class NioSocketProDemo {
 		System.out.println("服务器启动了。。。。。。。。");
 		while(true) {
 			try {
-				while(selector.select(0)>0) {// 问过内核了 有没有事件 ， 回复 有：
+				while(selector.select(0)>0) {// 问过内核了 有没有事件 ， 回复 有
+					// 瑕疵:每次循环都和内核进行了数据传输,每次内核都要遍历这些个fd
 					Set<SelectionKey> selectedKeys = selector.selectedKeys();// 从多路复用器中取出有效的key
 					Iterator<SelectionKey> iterator = selectedKeys.iterator();
 					while(iterator.hasNext()) {
