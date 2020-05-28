@@ -39,6 +39,12 @@ public class NioSocketProDemo {
 			try {
 				while(selector.select(0)>0) {// 问过内核了 有没有事件 ， 回复 有
 					// 瑕疵:每次循环都和内核进行了数据传输,每次内核都要遍历这些个fd
+					/**
+					 * 后续的改进：有一些fd传给内核一次，内核保存
+					 * 1.创建内核的一个空间
+					 * 2.把fd 增加进去
+					 * 3.通过循环的方式，等待通知 哪些fd可以 R/W
+					 */
 					Set<SelectionKey> selectedKeys = selector.selectedKeys();// 从多路复用器中取出有效的key
 					Iterator<SelectionKey> iterator = selectedKeys.iterator();
 					while(iterator.hasNext()) {
@@ -48,8 +54,7 @@ public class NioSocketProDemo {
 						if(key.isAcceptable()) {
 							acceptHandler(key);
 						}else if(key.isReadable()) {
-							
-							
+							readHandler(key);
 						}
 					}
 				}
