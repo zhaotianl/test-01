@@ -72,7 +72,7 @@ class NioThread extends Thread{
 	
 	static AtomicInteger idx = new AtomicInteger();
 	
-	NioThread(Selector sel, int n){
+	NioThread(Selector sel, int n){ // 这个构造是给boss用的
 		this.selector  = sel ;
 		this.selectors = n;
 		
@@ -156,7 +156,7 @@ class NioThread extends Thread{
 					}
 				}
 				boss = false;
-				if(boss && !queue[id].isEmpty()) {
+				if(boss && !queue[id].isEmpty()) { // 因为有三个线程，boss不参与，只有worker根据分配，分别注册自己的client
 					ByteBuffer buffer = ByteBuffer.allocate(8192);
 					SocketChannel client = null;
 					try {
