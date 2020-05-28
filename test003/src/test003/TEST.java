@@ -7,6 +7,14 @@ public class TEST {
      * （3）String, Integer, Double等immutable的类型特殊处理，可以理解为传值，最后的操作不会修改实参对象。
      */
     public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("1111111111111111111111");
+		System.out.println("1111111111111111111111");
+		/**00000000000000000000000000000000000000000*/
+		System.out.println("2222222222222222222222222");
+		System.out.println("2222222222222222222222222");
+		System.out.println("2222222222222222222222222");
+
 //		String a = new String("张三");
 //		TEST t = new TEST();
 //		t.change(a);
