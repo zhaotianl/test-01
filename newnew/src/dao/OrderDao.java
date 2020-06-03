@@ -27,5 +27,15 @@ public class OrderDao implements OrderDaoInterface {
 		
 	}
 
-	
+	@Override
+	public void delete3() {
+
+	}
+
+	@Override
+	public void delete4() {
+
+	}
+
+
 }
